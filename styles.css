@@ -1,0 +1,110 @@
+body, html {
+    background-color:black;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center; /* Esto centra horizontalmente todo el contenido */
+    align-items: center; /* Esto centra verticalmente todo el contenido */
+}
+
+.contenedor {
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+.centro {
+    text-align: center; /* Esto centra el texto dentro del div */
+}
+h1{
+  text-align: center;
+  color:white;
+}
+
+.glow-button{
+  padding: 17px 60px;
+  font-size:18px;
+  margin: 17px;
+  color: black;
+  border-radius: 14px;
+  background-color:cyan;
+  box-shadow: 0 0 0px cyan, 0 0 11px cyan;
+  
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 5px cyan,
+              0 0 50px cyan,
+              0 0 200px cyan;
+  
+}
+
+.btn{
+  padding: 12px 60px;
+  color: wheat;
+  font-size: 20px;
+}
+
+.btn-1{
+  border: none;
+
+  border-bottom: 2px solid white;
+  background-color: #00000000;
+  transition: transform 250ms;
+  
+}
+.btn-1:hover{
+  color: rgb(122, 255, 110);
+  transform: translatex(21px);
+  background-color: #00000000;
+
+  border-bottom: 2px solid rgb(110, 241, 132);
+}
+
+.btn-2{
+  border: solid blue;
+  color: white;
+  border-radius: 13px;
+  background-color: rgba(0, 255, 0, 0);
+  transition: transform 250ms;
+  
+}
+
+.btn-2:hover{
+  color: pink;
+  transform: translateX(-21px);
+}
+
+.btn-3{
+  border: solid rgb(233, 32, 32);
+  border-bottom: 14px solid rgb(233, 32, 32);
+  background-color: rgba(0, 255, 0, 0) ;
+  transition: transform 250ms ;
+}
+
+.btn-3:hover{
+  transform: translateY(-21px);
+
+}
+
+.btn-4{
+  background-color: aliceblue;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  transition: transform 250ms;
+ 
+
+}
+
+.btn-4:hover{
+  transform: translateY(21px);
+  
+}
+
+.shadow{
+  box-shadow: 5px 11px 0px 0px rgba(255,0,0,0.42);
+}
+
+.shadow:hover{
+  box-shadow: inset -17px -9px 20px -3px rgba(255, 0, 0, 0.41);
+}

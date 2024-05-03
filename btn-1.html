@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tic/styles.css"> <!-- Enlaza tu archivo CSS -->
+
+    <title>Botones</title>
+</head>
+<body>
+    <div class="">
+        <input class="btn btn-1" type="button" value="recipe" onclick="increment()">
+        <!-- <input class="btn btn-3" type="button" value="sucrite">
+        <input class="btn btn-1" type="button" value="entrar">
+        <input class="btn btn-4" type="button" value="regular">
+        <input class="btn btn-4 shadow" type="button" value="regular"> -->
+
+    </div>
+    
+    <script>
+        let nun = 0;
+
+function increment() {
+    let btnNameClass = ['btn-1', 'btn-2', 'btn-3',
+                         'glow-button']; // Removed the comma after 'btn-4 shadow'
+    let btnClass = document.querySelector('input');
+
+    btnClass.classList.remove(btnNameClass[nun]);
+    nun++; // Increment nun here to switch to the next class
+
+    // Reset nun if it exceeds the length of btnNameClass
+    if (nun >= btnNameClass.length) {
+        nun = 0;
+        
+    }
+
+    btnClass.classList.add(btnNameClass[nun]);
+}
+
+        
+    </script>
+
+</body>
+</html>

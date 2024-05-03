@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizar Div</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo"></h1>
+        <div class="btn">
+            <input class="styled glow-button" type="button" value="Facil" />
+            <input class="styled glow-button" type="button" value="Intermedio" />
+            <input class="styled glow-button" type="button" value="Dificil" onclick="cls()"  />
+        </div>
+    </div>
+</body>
+<script>
+    function escribirEnPantalla(texto) {
+  let arr = texto.split("");
+  let i = 0;
+  let titulo = document.getElementById("titulo");
+
+  let intervalo = setInterval(function() {
+    titulo.textContent += arr[i];
+    i++;
+
+    if (i >= arr.length) {
+      clearInterval(intervalo);
+    }
+  }, 50); // Reducí el intervalo de tiempo a 100 milisegundos para una ejecución más rápida.
+}
+
+escribirEnPantalla("selecciona la dificultad");
+
+function reproducirAudio() {
+            var audio = new Audio('dificulta.mp3'); // Reemplaza 'ruta/del/archivo/audio.mp3' con la ruta de tu archivo de audio
+            audio.play();
+        }
+
+function cls(){
+    let btnDiv = document.querySelector('.btn');
+
+    // Verificar si el elemento existe antes de intentar eliminarlo
+    if (btnDiv) {
+        // Eliminar el elemento
+        btnDiv.remove();
+    }
+
+    let titulo = document.getElementById("titulo");
+    titulo.textContent =''
+
+    reproducirAudio()
+    escribirEnPantalla("Hola jugador, has escogido dificultad máxima para este videojuego. Tu primera misión es hablar con una mujer. Buena suerte, la necesitarás.");
+
+}
+</script>
+</html>

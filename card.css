@@ -1,0 +1,51 @@
+body, html {
+    background-color:black;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center; /* Esto centra horizontalmente todo el contenido */
+    align-items: center; /* Esto centra verticalmente todo el contenido */
+}
+
+.contenedor {
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+.centro {
+    text-align: center; /* Esto centra el texto dentro del div */
+}
+
+.card-container{
+    margin: 2%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 3px 1px rgba(255,0,0,1)
+}
+
+.column{
+    float: left;
+    width: 33.33%;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+    .card-container{
+        margin: 2%;
+        padding: 10%;
+        box-shadow: 0px 10px 3px 1px rgba(255,0,0,1)
+    }
+    
+    .column {
+        
+        width: 75%;
+    }
+  }
